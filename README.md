@@ -1,1 +1,2 @@
-# Proyecto numero 2 del curso de Tecnicas de Programacion y Laboratorio
+# Proyecto número 2 del curso de Técnicas de Programación y Laboratorio
+Se mejora el código usado en el proyecto 1, usando maven y buenas prácticas de programación.
