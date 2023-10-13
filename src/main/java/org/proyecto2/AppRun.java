@@ -9,8 +9,11 @@ public class AppRun {
         SanitationStatisticService sanitationStatisticService =
                 new SanitationStatisticServiceImpl(new CountrySanitationStatisticsRepositoryImpl());
 
-        double averageWaterAccess = sanitationStatisticService.averageWaterAccess();
+        Double averageWaterAccess = sanitationStatisticService.averageWaterAccess();
         String countryGreaterAccessWater = sanitationStatisticService.countryGreaterAccessWater();
-
+        Double medianPopulation = sanitationStatisticService.medianPopulation();
+        Double averagePopulationAffectedByDrought = sanitationStatisticService.averagePopulationAffectedByDrought();
+        Double varianceAffectedPopulationDroughts = sanitationStatisticService.
+                varianceAffectedPopulationDroughts(averagePopulationAffectedByDrought);
     }
 }
