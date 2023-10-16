@@ -53,7 +53,8 @@ public class CountrySanitationStatisticsRepositoryImpl
                         new CountrySanitationStatistics(
                                 "Guayana Francesa", 300000, 88.7, 30000, 40, 23, 7.3),
                         new CountrySanitationStatistics(
-                                "Brasil", 215313498, 69.2, 15000956, 5210, 1405, 13.9));
+                                "Brasil", 215313498, 69.2, 15000956, 5210, 1405, 13.9),
+                        new CountrySanitationStatistics(null, null, null, null, null, null, null));
 
         return countriesList;
     }
