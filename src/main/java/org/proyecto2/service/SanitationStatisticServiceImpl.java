@@ -20,10 +20,13 @@ public class SanitationStatisticServiceImpl implements SanitationStatisticServic
     @Override
     public Double averageWaterAccess() {
         Double sumAverageWaterAccess = 0D;
-        int numCountries = this.countriesList.size();
+        int numCountries = 0;
 
         for (CountrySanitationStatistics i : this.countriesList) {
-            sumAverageWaterAccess += i.waterAccessPercentage();
+            if (i.waterAccessPercentage() != null) {
+                sumAverageWaterAccess += i.waterAccessPercentage();
+                numCountries++;
+            }
         }
 
         return sumAverageWaterAccess / numCountries;
@@ -36,7 +39,8 @@ public class SanitationStatisticServiceImpl implements SanitationStatisticServic
 
         for (CountrySanitationStatistics i : this.countriesList) {
 
-            if (i.waterAccessPercentage() > waterAccessPercentage) {
+            if (i.waterAccessPercentage() != null
+                    && i.waterAccessPercentage() > waterAccessPercentage) {
                 country = i.country();
                 waterAccessPercentage = i.waterAccessPercentage();
             }
@@ -50,7 +54,9 @@ public class SanitationStatisticServiceImpl implements SanitationStatisticServic
         ArrayList<Integer> population = new ArrayList<Integer>();
 
         for (CountrySanitationStatistics i : this.countriesList) {
-            population.add(i.population());
+            if (i.population() != null) {
+                population.add(i.population());
+            }
         }
 
         ArrayList<Integer> orderedPopulation = (ArrayList<Integer>) sortData(population).clone();
@@ -70,25 +76,33 @@ public class SanitationStatisticServiceImpl implements SanitationStatisticServic
     @Override
     public Double averagePopulationAffectedByDrought() {
         Double sum = 0D;
+        int numCountries = 0;
 
         for (CountrySanitationStatistics i : this.countriesList) {
-            sum += i.populationAffectedByDrought();
+            if (i.populationAffectedByDrought() != null) {
+                sum += i.populationAffectedByDrought();
+                numCountries++;
+            }
         }
 
-        return sum / this.countriesList.size();
+        return sum / numCountries;
     }
 
     @Override
     public Double varianceAffectedPopulationDroughts(Double averagePopulationAffectedByDrought) {
         Double sumSquare = 0D;
+        int numCountries = 0;
 
         for (CountrySanitationStatistics i : this.countriesList) {
-            Double difference =
-                    i.populationAffectedByDrought() - averagePopulationAffectedByDrought;
-            sumSquare += difference * difference;
+            if (i.populationAffectedByDrought() != null) {
+                Double difference =
+                        i.populationAffectedByDrought() - averagePopulationAffectedByDrought;
+                sumSquare += difference * difference;
+                numCountries++;
+            }
         }
 
-        return sumSquare / this.countriesList.size();
+        return sumSquare / numCountries;
     }
 
     @Override
