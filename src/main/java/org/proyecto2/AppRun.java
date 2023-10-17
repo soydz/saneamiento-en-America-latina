@@ -1,7 +1,5 @@
 package org.proyecto2;
 
-//mvn fmt:format
-
 import java.text.MessageFormat;
 import org.proyecto2.repository.CountrySanitationStatisticsRepositoryImpl;
 import org.proyecto2.service.SanitationStatisticService;
