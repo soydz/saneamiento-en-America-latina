@@ -6,6 +6,8 @@ import java.text.MessageFormat;
 import org.proyecto2.repository.CountrySanitationStatisticsRepositoryImpl;
 import org.proyecto2.service.SanitationStatisticService;
 import org.proyecto2.service.SanitationStatisticServiceImpl;
+import java.text.MessageFormat;
+
 public class AppRun {
     public static void main(String[] args) {
 
@@ -15,10 +17,12 @@ public class AppRun {
         Double averageWaterAccess = sanitationStatisticService.averageWaterAccess();
         String countryGreaterAccessWater = sanitationStatisticService.countryGreaterAccessWater();
         Double medianPopulation = sanitationStatisticService.medianPopulation();
-        Double averagePopulationAffectedByDrought = sanitationStatisticService.averagePopulationAffectedByDrought();
-        Double varianceAffectedPopulationDroughts = sanitationStatisticService.
-                varianceAffectedPopulationDroughts(averagePopulationAffectedByDrought);
-        
+        Double averagePopulationAffectedByDrought =
+                sanitationStatisticService.averagePopulationAffectedByDrought();
+        Double varianceAffectedPopulationDroughts =
+                sanitationStatisticService.varianceAffectedPopulationDroughts(
+                        averagePopulationAffectedByDrought);
+
         System.out.println(
         MessageFormat.format(
             "Average water access: {0}", averageWaterAccess));
