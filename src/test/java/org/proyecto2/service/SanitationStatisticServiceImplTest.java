@@ -2,16 +2,13 @@ package org.proyecto2.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.proyecto2.repository.CountrySanitationStatisticsRepositoryImpl;
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 public class SanitationStatisticServiceImplTest {
     private SanitationStatisticService sanitationStatisticService;
-    private static final Logger logger = LoggerFactory.getLogger(SanitationStatisticServiceImplTest.class);
 
     @BeforeEach
     public void setup() {
@@ -58,73 +55,5 @@ public class SanitationStatisticServiceImplTest {
                         averagePopulationAffectedByDrought);
         assertNotNull(varianceAffectedPopulationDroughts);
         assertEquals(1.6367929365640812E13, varianceAffectedPopulationDroughts);
-    }
-  
-  @Test
-    public void testAverageWaterAccess() {
-        logger.info("Average Water Access");
-        SanitationStatisticServiceImpl instance = null;
-        Double expResult = null;
-        Double result = instance.averageWaterAccess();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-       logger.error("The test case is a prototype.");
-    }
-
-    @Test
-    public void testCountryGreaterAccessWater() {
-        logger.info("Country greater access Water");
-        SanitationStatisticServiceImpl instance = null;
-        String expResult = "";
-        String result = instance.countryGreaterAccessWater();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-        logger.error("The test case is a prototype.");
-    }
-
-    @Test
-    public void testMedianPopulation() {
-        logger.info("Median population Water Access");
-        SanitationStatisticServiceImpl instance = null;
-        Double expResult = null;
-        Double result = instance.medianPopulation();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-        logger.error("The test case is a prototype.");
-    }
-
-    @Test
-    public void testAveragePopulationAffectedByDrought() {
-        logger.info("Average Population Affected By Drought");
-        SanitationStatisticServiceImpl instance = null;
-        Double expResult = null;
-        Double result = instance.averagePopulationAffectedByDrought();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-        logger.error("The test case is a prototype.");
-    }
-
-    @Test
-    public void testVarianceAffectedPopulationDroughts() {
-        logger.info("Variance affected populationdroughts");
-        Double averagePopulationAffectedByDrought = null;
-        SanitationStatisticServiceImpl instance = null;
-        Double expResult = null;
-        Double result = instance.varianceAffectedPopulationDroughts(averagePopulationAffectedByDrought);
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-        logger.error("The test case is a prototype.");
-    }
-
-    @Test
-    public void testSortData() {
-        logger.info("Sort data");
-        ArrayList<Integer> list = null;
-        SanitationStatisticServiceImpl instance = null;
-        ArrayList<Integer> expResult = null;
-        ArrayList<Integer> result = instance.sortData(list);
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-        logger.error("The test case is a prototype.");   
     }
 }
