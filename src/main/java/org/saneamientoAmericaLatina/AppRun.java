@@ -1,16 +1,21 @@
-package org.proyecto2;
+package org.saneamientoAmericaLatina;
 
 import java.text.MessageFormat;
-import org.proyecto2.repository.CountrySanitationStatisticsRepositoryImpl;
-import org.proyecto2.service.SanitationStatisticService;
-import org.proyecto2.service.SanitationStatisticServiceImpl;
-import java.text.MessageFormat;
+// import org.saneamientoAmericaLatina.repository.CountrySanitationStatisticsRepositoryImpl;
+import org.saneamientoAmericaLatina.repository.CountrySanitationStatisticsUsingFileRepositoryImpl;
+import org.saneamientoAmericaLatina.service.SanitationStatisticService;
+import org.saneamientoAmericaLatina.service.SanitationStatisticServiceImpl;
 
 public class AppRun {
     public static void main(String[] args) {
 
+        /*SanitationStatisticService sanitationStatisticService =
+         *      new SanitationStatisticServiceImpl(new CountrySanitationStatisticsRepositoryImpl());
+         */
+
         SanitationStatisticService sanitationStatisticService =
-                new SanitationStatisticServiceImpl(new CountrySanitationStatisticsRepositoryImpl());
+                new SanitationStatisticServiceImpl(
+                        new CountrySanitationStatisticsUsingFileRepositoryImpl());
 
         Double averageWaterAccess = sanitationStatisticService.averageWaterAccess();
         String countryGreaterAccessWater = sanitationStatisticService.countryGreaterAccessWater();
@@ -21,20 +26,24 @@ public class AppRun {
                 sanitationStatisticService.varianceAffectedPopulationDroughts(
                         averagePopulationAffectedByDrought);
 
-        System.out.println(
-        MessageFormat.format(
-            "Average water access: {0}", averageWaterAccess));
+        System.out.println(MessageFormat.format("Average water access: {0}", averageWaterAccess));
 
         System.out.println(
-            MessageFormat.format("Country greater access water: {0}", countryGreaterAccessWater));
+                MessageFormat.format(
+                        "Country greater access water: {0}", countryGreaterAccessWater));
 
         System.out.println(
-            MessageFormat.format("Median Sanitation Statistic for Population: {0}", medianPopulation));
-        
+                MessageFormat.format(
+                        "Median Sanitation Statistic for Population: {0}", medianPopulation));
+
         System.out.println(
-            MessageFormat.format("Average population affected by drought: {0}", averagePopulationAffectedByDrought));
-        
+                MessageFormat.format(
+                        "Average population affected by drought: {0}",
+                        averagePopulationAffectedByDrought));
+
         System.out.println(
-            MessageFormat.format("Variance affected population droughts: {0}", varianceAffectedPopulationDroughts));
+                MessageFormat.format(
+                        "Variance affected population droughts: {0}",
+                        varianceAffectedPopulationDroughts));
     }
 }
