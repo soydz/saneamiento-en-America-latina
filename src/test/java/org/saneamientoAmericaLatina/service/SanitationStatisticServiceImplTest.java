@@ -1,26 +1,29 @@
-package org.proyecto2.service;
+package org.saneamientoAmericaLatina.service;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.proyecto2.repository.CountrySanitationStatisticsRepositoryImpl;
+//import org.saneamientoAmericaLatina.repository.CountrySanitationStatisticsRepositoryImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+import org.saneamientoAmericaLatina.repository.CountrySanitationStatisticsUsingFileRepositoryImpl;
 
 public class SanitationStatisticServiceImplTest {
     private SanitationStatisticService sanitationStatisticService;
 
     @BeforeEach
     public void setup() {
+
         this.sanitationStatisticService =
-                new SanitationStatisticServiceImpl(new CountrySanitationStatisticsRepositoryImpl());
+                new SanitationStatisticServiceImpl(
+                        new CountrySanitationStatisticsUsingFileRepositoryImpl());
     }
 
     @Test
     public void average_water_access_return_a_valid_number() {
         Double averageWaterAccess = this.sanitationStatisticService.averageWaterAccess();
         assertNotNull(averageWaterAccess);
-        assertEquals(75.93333333333335, averageWaterAccess);
+        assertEquals(75.93333333333332, averageWaterAccess);
     }
 
     @Test
