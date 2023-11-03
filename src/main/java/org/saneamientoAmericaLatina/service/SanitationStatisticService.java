@@ -1,4 +1,4 @@
-package org.proyecto2.service;
+package org.saneamientoAmericaLatina.service;
 
 import java.util.ArrayList;
 

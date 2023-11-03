@@ -1,4 +1,4 @@
-package org.proyecto2.model;
+package org.saneamientoAmericaLatina.model;
 
 public record CountrySanitationStatistics(
         String country,

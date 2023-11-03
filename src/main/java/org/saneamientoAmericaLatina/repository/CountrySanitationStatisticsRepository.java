@@ -1,6 +1,6 @@
-package org.proyecto2.repository;
+package org.saneamientoAmericaLatina.repository;
 
-import org.proyecto2.model.CountrySanitationStatistics;
+import org.saneamientoAmericaLatina.model.CountrySanitationStatistics;
 import java.util.List;
 
 public interface CountrySanitationStatisticsRepository {
