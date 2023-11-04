@@ -12,6 +12,4 @@ public interface SanitationStatisticService {
     Double averagePopulationAffectedByDrought();
 
     Double varianceAffectedPopulationDroughts(Double averagePopulationAffectedByDrought);
-
-    ArrayList<Integer> sortData(ArrayList<Integer> list);
 }
