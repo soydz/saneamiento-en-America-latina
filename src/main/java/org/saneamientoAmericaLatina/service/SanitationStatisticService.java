@@ -1,7 +1,5 @@
 package org.saneamientoAmericaLatina.service;
 
-import java.util.ArrayList;
-
 public interface SanitationStatisticService {
     Double averageWaterAccess();
 
