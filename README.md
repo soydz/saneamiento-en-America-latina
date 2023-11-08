@@ -10,5 +10,4 @@ Project that takes statistics of most Latin American countries from a file and p
 calculations such as averageWaterAccess, averagePopulationAffectedByDrought, etc.
 
 ## Execution
--------------
 From AppRun class
