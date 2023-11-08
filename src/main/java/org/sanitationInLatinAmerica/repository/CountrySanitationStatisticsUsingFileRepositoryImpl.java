@@ -1,6 +1,6 @@
-package org.saneamientoAmericaLatina.repository;
+package org.sanitationInLatinAmerica.repository;
 
-import org.saneamientoAmericaLatina.model.CountrySanitationStatistics;
+import org.sanitationInLatinAmerica.model.CountrySanitationStatistics;
 
 import java.util.ArrayList;
 import java.util.List;

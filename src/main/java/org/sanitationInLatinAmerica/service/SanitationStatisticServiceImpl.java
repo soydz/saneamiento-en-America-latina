@@ -1,10 +1,10 @@
-package org.saneamientoAmericaLatina.service;
+package org.sanitationInLatinAmerica.service;
 
 import java.util.Comparator;
 import java.util.List;
 
-import org.saneamientoAmericaLatina.model.CountrySanitationStatistics;
-import org.saneamientoAmericaLatina.repository.CountrySanitationStatisticsRepository;
+import org.sanitationInLatinAmerica.model.CountrySanitationStatistics;
+import org.sanitationInLatinAmerica.repository.CountrySanitationStatisticsRepository;
 
 public class SanitationStatisticServiceImpl implements SanitationStatisticService {
     private final List<CountrySanitationStatistics> countriesList;

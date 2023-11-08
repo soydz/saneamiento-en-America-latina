@@ -1,4 +1,4 @@
-package org.saneamientoAmericaLatina.service;
+package org.sanitationInLatinAmerica.service;
 
 import org.junit.jupiter.api.BeforeEach;
 //import org.saneamientoAmericaLatina.repository.CountrySanitationStatisticsRepositoryImpl;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-import org.saneamientoAmericaLatina.repository.CountrySanitationStatisticsUsingFileRepositoryImpl;
+import org.sanitationInLatinAmerica.repository.CountrySanitationStatisticsUsingFileRepositoryImpl;
 
 public class SanitationStatisticServiceImplTest {
     private SanitationStatisticService sanitationStatisticService;

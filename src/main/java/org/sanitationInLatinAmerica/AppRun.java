@@ -1,10 +1,10 @@
-package org.saneamientoAmericaLatina;
+package org.sanitationInLatinAmerica;
 
 import java.text.MessageFormat;
 // import org.saneamientoAmericaLatina.repository.CountrySanitationStatisticsRepositoryImpl;
-import org.saneamientoAmericaLatina.repository.CountrySanitationStatisticsUsingFileRepositoryImpl;
-import org.saneamientoAmericaLatina.service.SanitationStatisticService;
-import org.saneamientoAmericaLatina.service.SanitationStatisticServiceImpl;
+import org.sanitationInLatinAmerica.repository.CountrySanitationStatisticsUsingFileRepositoryImpl;
+import org.sanitationInLatinAmerica.service.SanitationStatisticService;
+import org.sanitationInLatinAmerica.service.SanitationStatisticServiceImpl;
 
 public class AppRun {
     public static void main(String[] args) {

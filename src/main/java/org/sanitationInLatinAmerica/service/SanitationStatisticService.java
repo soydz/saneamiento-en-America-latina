@@ -1,4 +1,4 @@
-package org.saneamientoAmericaLatina.service;
+package org.sanitationInLatinAmerica.service;
 
 public interface SanitationStatisticService {
     Double averageWaterAccess();
