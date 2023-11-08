@@ -6,8 +6,13 @@
 [![SLF4J](https://img.shields.io/badge/SLF4J-2.0.9-FFD1A1?style=for-the-badge&logo=&logoColor=white&labelColor=262626)](https://www.slf4j.org/)
 [![Google java format](https://img.shields.io/badge/Google_java_format-1.18.1-FBBC05?style=for-the-badge&logo=&logoColor=white&labelColor=262626)](https://github.com/google/google-java-format)
 
-Project that takes statistics of most Latin American countries from a file and performs some interesting statistical
-calculations such as averageWaterAccess, averagePopulationAffectedByDrought, etc.
+Project that takes statistics from the majority of Latin American countries from a file and makes some interesting
+statistics such as:
+
+* calculation of average access to water.
+* average population affected by droughts.
+* Etc.
 
 ## Execution
+
 From AppRun class
