@@ -9,11 +9,11 @@ function validate(e) {
 	e.preventDefault();
 
 	if (Form[0].value != "") {
-		if (Form[1].value != "") {
+		if (Form[1].value != "" && Form[1].value <= 2147483647) {
 			if (Form[2].value != "" && Form[2].value >= 0 && Form[2].value <= 100) {
-				if (Form[3].value != "") {
-					if (Form[4].value != "") {
-						if (Form[5].value != "") {
+				if (Form[3].value != "" && Form[3].value <= 2147483647) {
+					if (Form[4].value != "" && Form[4].value <= 2147483647) {
+						if (Form[5].value != "" && Form[5].value <= 2147483647) {
 							if (Form[6].value != "") {
 								add();
 							} else {
