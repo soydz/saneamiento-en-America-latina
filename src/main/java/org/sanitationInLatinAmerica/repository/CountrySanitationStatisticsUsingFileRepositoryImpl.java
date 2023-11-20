@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 import java.nio.file.Files;
 import java.io.IOException;
@@ -19,8 +20,7 @@ public class CountrySanitationStatisticsUsingFileRepositoryImpl
 
     private static final Logger logger =
             LoggerFactory.getLogger(CountrySanitationStatisticsUsingFileRepositoryImpl.class);
-
-    private List<CountrySanitationStatistics> countriesList;
+    private final List<CountrySanitationStatistics> countriesList;
 
     public CountrySanitationStatisticsUsingFileRepositoryImpl() {
         this.countriesList = new ArrayList<>(loadCountriesStatistics());
@@ -29,6 +29,15 @@ public class CountrySanitationStatisticsUsingFileRepositoryImpl
     @Override
     public List<CountrySanitationStatistics> statisticsOfCountries() {
         return this.countriesList;
+    }
+
+    @Override
+    public CountrySanitationStatistics addStatistics(CountrySanitationStatistics newStatistics) {
+        this.countriesList.add(newStatistics);
+        return this.countriesList.stream()
+                .filter(isStatistics(newStatistics))
+                .findAny()
+                .orElse(null);
     }
 
     private List<CountrySanitationStatistics> loadCountriesStatistics() {
@@ -60,5 +69,10 @@ public class CountrySanitationStatisticsUsingFileRepositoryImpl
                 Integer.valueOf(arrTxt[4]),
                 Integer.valueOf(arrTxt[5]),
                 Double.valueOf(arrTxt[6]));
+    }
+
+    private Predicate<CountrySanitationStatistics> isStatistics(
+            CountrySanitationStatistics newStatistics) {
+        return p -> p.country().equals(newStatistics.country());
     }
 }

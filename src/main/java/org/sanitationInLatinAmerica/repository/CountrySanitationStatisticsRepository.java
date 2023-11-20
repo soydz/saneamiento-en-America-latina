@@ -5,4 +5,6 @@ import java.util.List;
 
 public interface CountrySanitationStatisticsRepository {
     List<CountrySanitationStatistics> statisticsOfCountries();
+
+    CountrySanitationStatistics addStatistics(CountrySanitationStatistics newStatistics);
 }
