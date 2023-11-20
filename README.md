@@ -24,4 +24,3 @@ From Application class
 
 ## Software Structure
 ![software structure](ProjectStructureDiagram.svg)
-<image src="/Project%20structure%20diagram.svg">
