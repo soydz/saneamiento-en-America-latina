@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data Country</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="icon" type="image/svg+xml" href="../images/server.svg">
+</head>
+<body>
+<main>
+
+    <nav>
+        <ul>
+            <a href="../index.html">
+                <li>Return</li>
+            </a>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>Add Data Country</h1>
+
+        <form class="form-add" id="form-add">
+            <div>
+                <label for="country">Country</label>
+                <input type="text" name="country" id="country" placeholder="Enter the name of the country"
+                       pattern="[A-Za-z]+" required>
+            </div>
+
+            <div>
+                <label for="population">Population</label>
+                <input type="number" name="population" id="population" placeholder="Enter the number of inhabitants"
+                       required>
+            </div>
+
+            <div>
+                <label for="waterAccessPercentage">Water access percentage</label>
+                <input type="number" name="waterAccessPercentage" id="waterAccessPercentage"
+                       placeholder="Enter the percentage (0-100) of people with access to water" min="0"
+                       max="100" step="0.1"
+                       required>
+            </div>
+
+            <div>
+                <label for="populationAffectedByDrought">Population Affected By Drought</label>
+                <input type="number" name="populationAffectedByDrought" id="populationAffectedByDrought"
+                       placeholder="Enter the number of people affected by the water drought" required>
+            </div>
+
+            <div>
+                <label for="numberOfHospitals">Number of hospitals</label>
+                <input type="number" name="numberOfHospitals" id="numberOfHospitals"
+                       placeholder="Enter the number of hospitals" required>
+            </div>
+
+            <div>
+                <label for="numberOfHospitalsSanitationProblems">Number of hospitals sanitation problems</label>
+                <input type="number" name="numberOfHospitalsSanitationProblems" id="numberOfHospitalsSanitationProblems"
+                       placeholder="Enter the number of hospitals with sanitation problems" required>
+            </div>
+
+            <div>
+                <label for="numberOfWaterTreatmentPlantsPerHundredThousandInhabitants">number of water treatment plants
+                    per hundred thousand in population</label>
+                <input type="number" name="numberOfWaterTreatmentPlantsPerHundredThousandInhabitants"
+                       id="numberOfWaterTreatmentPlantsPerHundredThousandInhabitants"
+                       placeholder="Enter the number of water treatment plants per 100,000 inhabitants" step="0.1"
+                       required>
+            </div>
+
+            <button class="btn-add" id="btn-add" type="submit">Guardar</button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../scripts/addData.js"></script>
+
+</body>
+</html>
