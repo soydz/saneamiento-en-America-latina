@@ -21,3 +21,6 @@ statistics such as:
 ## Execution
 
 From Application class
+
+## Software Structure
+![software structure](ProjectStructureDiagram.svg)
