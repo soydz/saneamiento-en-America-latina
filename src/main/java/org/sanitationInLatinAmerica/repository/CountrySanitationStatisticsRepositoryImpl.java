@@ -47,4 +47,9 @@ public class CountrySanitationStatisticsRepositoryImpl
                         "Brasil", 215313498, 69.2, 15000956, 5210, 1405, 13.9),
                 new CountrySanitationStatistics(null, null, null, null, null, null, null));
     }
+
+    @Override
+    public CountrySanitationStatistics addStatistics(CountrySanitationStatistics newStatistics) {
+        return null;
+    }
 }

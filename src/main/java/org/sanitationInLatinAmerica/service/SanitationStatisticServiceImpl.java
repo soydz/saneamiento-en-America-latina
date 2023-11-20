@@ -8,10 +8,12 @@ import org.sanitationInLatinAmerica.repository.CountrySanitationStatisticsReposi
 
 public class SanitationStatisticServiceImpl implements SanitationStatisticService {
     private final List<CountrySanitationStatistics> countriesList;
+    private final CountrySanitationStatisticsRepository countrySanitationStatisticsRepository;
 
     public SanitationStatisticServiceImpl(
             CountrySanitationStatisticsRepository countrySanitationStatisticsRepository) {
         this.countriesList = countrySanitationStatisticsRepository.statisticsOfCountries();
+        this.countrySanitationStatisticsRepository = countrySanitationStatisticsRepository;
     }
 
     @Override
@@ -27,8 +29,7 @@ public class SanitationStatisticServiceImpl implements SanitationStatisticServic
         return this.countriesList.stream()
                 .max(Comparator.comparingDouble(CountrySanitationStatistics::waterAccessPercentage))
                 .get()
-                .country()
-                .replace("\"", "");
+                .country();
     }
 
     @Override
@@ -76,5 +77,15 @@ public class SanitationStatisticServiceImpl implements SanitationStatisticServic
         }
 
         return sumSquare / numCountries;
+    }
+
+    @Override
+    public List<CountrySanitationStatistics> statisticsList() {
+        return this.countrySanitationStatisticsRepository.statisticsOfCountries();
+    }
+
+    @Override
+    public CountrySanitationStatistics addStatistics(CountrySanitationStatistics newStatistics) {
+        return this.countrySanitationStatisticsRepository.addStatistics(newStatistics);
     }
 }

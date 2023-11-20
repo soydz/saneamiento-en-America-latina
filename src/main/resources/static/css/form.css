@@ -1,0 +1,31 @@
+.form-add {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.form-add div {
+  margin: 1.5em 0;
+}
+
+.form-add label,input{
+  display: block;
+}
+
+.form-add input {
+  margin-top: 0.4em;
+  width: 100%;
+  padding: 0.5em;
+  border-style: solid; 
+  border-radius: 5px;
+}
+
+.btn-add {
+  padding: 1em;
+  margin-bottom: 1.5em;
+  background: #0B5ED7;
+  color: #FFFFFF;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
